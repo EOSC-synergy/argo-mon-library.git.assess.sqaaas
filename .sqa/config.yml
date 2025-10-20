@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/argo-mon-library:
+      branch: main
+      repo: https://github.com/ARGOeu/argo-mon-library.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/argo-mon-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-taupe-butterfly.sh
+        container: qc.acc_sickly-saffron-shark
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/argo-mon-library find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-seashell-orangutan.sh
+        container: qc.doc_boozy-malachite-tamarin
+      github.com/ARGOeu/argo-mon-library git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-maroon-audemer.sh
+        container: qc.doc_grumpy-champagne-snail
+      github.com/ARGOeu/argo-mon-library markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-amaranth-ragdoll.sh
+        container: qc.doc_grumpy-ochre-collie
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/argo-mon-library licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-silver-peccary.sh
+        container: qc.lic_hasty-aqua-elephant
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/argo-mon-library bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-lilac-cattle.sh
+        container: qc.sec_fuzzy-olive-chin
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/argo-mon-library flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-copper-gecko.sh
+        container: qc.sty_thirsty-grey-seahorse
+  QC.Uni:
+    repos:
+      github.com/ARGOeu/argo-mon-library pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-orchid-hummingbird.sh
+        container: qc.uni_freaky-chestnut-dingo
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/argo-mon-library get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-maroon-crocodile.sh
+        container: qc.ver_beady-viridian-harrier
+timeout: 5400
