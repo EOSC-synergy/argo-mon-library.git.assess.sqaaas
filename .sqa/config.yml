@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/argo-mon-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-taupe-butterfly.sh
-        container: qc.acc_sickly-saffron-shark
+        - /usr/bin/env sh .sqa/script.greasy-crimson-llama.sh
+        container: qc.acc_freaky-wisteria-bombay
   QC.Doc:
     repos:
       github.com/ARGOeu/argo-mon-library find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-seashell-orangutan.sh
-        container: qc.doc_boozy-malachite-tamarin
+        - /usr/bin/env sh .sqa/script.shaggy-chestnut-bulldog.sh
+        container: qc.doc_shaky-sangria-burmese
       github.com/ARGOeu/argo-mon-library git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-maroon-audemer.sh
-        container: qc.doc_grumpy-champagne-snail
+        - /usr/bin/env sh .sqa/script.queasy-salmon-manatee.sh
+        container: qc.doc_geeky-auburn-hyrax
       github.com/ARGOeu/argo-mon-library markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-amaranth-ragdoll.sh
-        container: qc.doc_grumpy-ochre-collie
+        - /usr/bin/env sh .sqa/script.hilly-teal-corgi.sh
+        container: qc.doc_goopy-silver-weasel
   QC.Lic:
     repos:
       github.com/ARGOeu/argo-mon-library licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-silver-peccary.sh
-        container: qc.lic_hasty-aqua-elephant
+        - /usr/bin/env sh .sqa/script.blurry-lavender-dunker.sh
+        container: qc.lic_craggy-beige-antelope
   QC.Sec:
     repos:
       github.com/ARGOeu/argo-mon-library bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-lilac-cattle.sh
-        container: qc.sec_fuzzy-olive-chin
+        - /usr/bin/env sh .sqa/script.skanky-platinum-collie.sh
+        container: qc.sec_muzzy-cerulean-barnacle
   QC.Sty:
     repos:
       github.com/ARGOeu/argo-mon-library flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-copper-gecko.sh
-        container: qc.sty_thirsty-grey-seahorse
+        - /usr/bin/env sh .sqa/script.stinky-buff-horse.sh
+        container: qc.sty_cheeky-razzmatazz-ferret
   QC.Uni:
     repos:
       github.com/ARGOeu/argo-mon-library pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-orchid-hummingbird.sh
-        container: qc.uni_freaky-chestnut-dingo
+        - /usr/bin/env sh .sqa/script.sunny-jade-mammoth.sh
+        container: qc.uni_fuzzy-mustard-mole
   QC.Ver:
     repos:
       github.com/ARGOeu/argo-mon-library get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-maroon-crocodile.sh
-        container: qc.ver_beady-viridian-harrier
+        - /usr/bin/env sh .sqa/script.stinky-aqua-sheepdog.sh
+        container: qc.ver_scaly-cobalt-yak
 timeout: 5400
